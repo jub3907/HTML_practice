@@ -1,0 +1,215 @@
+
+div, ul, li, a{
+    margin : 0;
+    padding : 0;
+}
+a{
+    text-decoration: none;
+}
+.min-headerwrap{
+    position: absolute;
+    top : 0;
+    left: 0;
+    display: none;
+    height: 30px;
+    border : 1px solid blue;
+    color: black;
+
+}
+.headerwrap{
+    top : 0;
+    left : 0;
+    width: 100%;
+    position: fixed;
+    display : flex;
+    flex-direction: column;
+    height: 129px;
+    background-color: white;
+}
+
+
+#header1{
+    flex : 0.3;
+    border-top: 1px solid #ddd;
+}
+
+#header2{
+    flex : 1;
+    border-top: 1px solid #ddd;
+    border-bottom : 1px solid black;
+
+}
+
+header{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro{
+    position : relative;
+    margin: 10px 0px;
+    text-align: right;    
+}
+#intro > a{
+    color: #666;
+    font-size: small;
+    padding : 3px;
+}
+
+#header2 > header{
+    display: flex;
+    
+}
+#logo{
+    flex : 0.3;
+    text-align: left;    
+    display: inline-block;
+    line-height: 81px;
+    color : black;
+    font-size: 35px;
+    font-weight: 100;
+    border-right: #333; /* 작동안함 */
+}
+#header2 > header > div{
+    flex : 0.7;
+}
+
+#menu {
+    display : flex;
+    list-style: none;
+    height : 90px;
+}
+#menu li{
+    flex : 1;
+    float : left;
+    position: relative;
+}
+#menu>li>a{
+    display: block;
+    color : #333;
+    font-weight: bold;
+    font-size : 15px;
+    text-align: center;
+    height: 100%;
+    line-height: 82px;
+    border-right: 1px solid #ddd;
+
+}
+#menu li:hover ul{
+    opacity: 1;
+}
+#menu li{
+    height: 100%;
+    overflow: visible;
+    padding : 0;
+}
+ul#sub-menu{
+    list-style: none;
+    display : inline-block;
+    position: absolute;
+    left : 0; 
+    top : 91px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid #ddd;
+    
+    opacity: 0;
+}
+#sub-menu li{
+    float : none;
+    box-sizing: border-box;
+    height : 50px;
+    
+}
+#sub-menu li a{
+    width: 100%;
+    font-size : 13px;
+    padding :5px 0; /* 잘 안됨.. */
+    color : #333;
+    line-height: 20px;
+    display: inline-block;
+}
+#sub-menu li:hover a{
+    color : blue;
+}
+
+
+/*
+#menu{
+    display: flex;
+    list-style: none;
+    
+}
+
+#menu li{
+    flex : 1;
+    float : left;
+}
+
+#menu li a{
+    display: block;     
+    color : #333;
+    line-height: 81px;  
+    height: 100%;       
+    text-align: center; 
+
+    font-weight: 800;
+    font-size: 15px;
+    border-right: 1px solid #ddd;
+
+}
+#sub-menu{
+    list-style: none;
+    position: absolute;
+    left : 0;
+    top : 40px;
+    width : 100px;
+    text-align: center;
+    background-color: blanchedalmond;
+
+}
+#sub-menu li{
+    list-style: none;
+    font-size : 10px;
+
+}
+*/
+@media screen and (max-width:850px){
+    .headerwrap{
+        visibility: collapse;
+    }
+    .min-headerwrap{
+        display: flex;
+    }
+}
+@media screen and (min-width:851px){
+}
+.bodywrap{
+    top : 130px;
+    left : 0;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+
+}
+#list{
+    position: relative;
+    width : 200px;
+    height: 1200px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#content{
+    margin: 0;
+    margin-left: 230px;
+    padding: 40px 20px 20px 20px;
+    box-sizing: border-box;
+    display: block;
+}
